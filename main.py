@@ -11,7 +11,7 @@ import config
 
 
 #Почта Акимовой
-akimova_mail, my_mail = 'ms.akimova.61@mail.ru', "kirillzg@yandex.ru"
+akimova_mail, my_mail = 'holaalla@rambler.ru', "kirillzg@yandex.ru"
 
 # Период проверки новых писем (в секундах)
 check_interval = 50  # 1 минута
@@ -19,7 +19,7 @@ check_interval = 50  # 1 минута
 def check_email():
     try:
         # Подключение к серверу IMAP
-        mail = imaplib.IMAP4_SSL(imap_server)
+        mail = imaplib.IMAP4_SSL(config.imap_server)
         mail.login(config.login, config.password)
         mail.select('inbox')
 
